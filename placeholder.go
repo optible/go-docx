@@ -9,13 +9,13 @@ import (
 
 var (
 	// OpenDelimiter defines the opening delimiter for the placeholders used inside a docx-document.
-	OpenDelimiter rune = '{'
+	OpenDelimiter string = '{{.'
 	// CloseDelimiter defines the closing delimiter for the placeholders used inside a docx-document.
-	CloseDelimiter rune = '}'
+	CloseDelimiter string = '}}'
 )
 
 // ChangeOpenCloseDelimiter is used for change the open and close delimiters
-func ChangeOpenCloseDelimiter(openDelimiter, closeDelimiter rune) {
+func ChangeOpenCloseDelimiter(openDelimiter, closeDelimiter string) {
 	OpenDelimiter = openDelimiter
 	CloseDelimiter = closeDelimiter
 }
