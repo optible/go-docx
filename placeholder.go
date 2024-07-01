@@ -175,7 +175,7 @@ func ParsePlaceholders(runs DocumentRuns, docBytes []byte) (placeholders []*Plac
 			//	- error
 			//	- cut out
 			// 	- skip the run (that's what we do because we're lazy bums)
-			if !isNestedCase() { // Sameer: This is done because our all placeholders are nested
+			if isNestedCase() {
 				log.Printf("detected nested placeholder in run %d \"%s\", skipping \n", run.ID, run.GetText(docBytes))
 				continue
 			}
